@@ -9,8 +9,23 @@
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
     font-display: swap;
+    --background-color: #000000;
+    --background-color-light: #ffffff;
+    --menu-background-color: #111111;
+    --text-prime-color: #ffffff;
+    --text-color-secondary: #111111;
+    --transparent-color: rgba(0, 0, 0, 0);
+    --menu-link-hover: #242424;
+}
+
+html {
     background-color: var(--background-color);
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    background-image: url(/img/background.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    height: 100%;
 }
 
 img {
@@ -18,5 +33,134 @@ img {
     height: auto;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    image-rendering: pixelated;
+}
+
+.main-container {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    margin-top: 6rem;
+}
+
+.main-content {
+    display: flex;
+    width: 1280px;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+    justify-content: center;
+}
+
+.components-select h1{
+    font-size: 3rem;
+    font-weight: 700;
+    opacity: 1;
+    color: var(--background-color-light);
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.navbar-container {
+    display: flex;
+    width: 100%;
+    height: 4.75rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    padding-top: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    width: 1280px;
+    padding: 0px 3rem;
+    height: 4.75rem;
+    justify-content: space-between;
+    color: var(--text-prime-color);
+    background-color: var(--menu-background-color);
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+#menu-logo {
+    width: 42px;
+}
+
+.nav-content ul {
+    display: flex;
+    gap: 2rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.2px;
+}
+
+.nav-content ul a {
+    cursor: pointer;
+    color: var(--text-prime-color);
+    padding: 6px 9px;
+    transition: 0.3s;
+}
+
+.nav-content #github-repository {
+    background-color: var(--background-color-light);
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: var(--text-color-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-content #github-repository img {
+    width: 20px;
+}
+
+.nav-content #menu-icon-mobile {
+    display: none;
+}
+.nav-content ul a:hover {
+    background-color: var(--menu-link-hover);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 880px) {
+
+    .nav-content ul {
+        display: none;
+    }
+
+    .nav-content #github-repository {
+        display: none;
+    }
+
+    .nav-content #menu-icon-mobile {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .nav-content {
+        padding: 0px 1.25rem;
+
+    }
+
+    .components-select h1{
+
+        font-size: 2rem;
+
+    }
+
+    .main-container {
+
+        margin-top: 64px;
+    }
 }
