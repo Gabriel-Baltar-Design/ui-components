@@ -43,7 +43,6 @@ img {
     max-width: 100%;
     height: 100%;
     margin: 0px auto;
-    margin-top: 6rem;
 }
 
 .main-content {
@@ -55,6 +54,7 @@ img {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 12rem;
 }
 .main-content #github-repository {
     background: linear-gradient(to right, rgb(77, 97, 170, 100%), rgb(102, 193, 149, 100%));
@@ -104,25 +104,32 @@ img {
 .navbar-container {
     display: flex;
     width: 100%;
-    height: 4.75rem;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
     padding-top: 1.5rem;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    transition: margin-top 0.3s;
+    
 }
 
 .nav-content {
+    top: 1.5rem;
     display: flex;
     width: 1280px;
     padding: 0px 3rem;
     height: 4.75rem;
     justify-content: space-between;
     color: var(--text-prime-color);
-    background-color: var(--menu-background-color);
+    background-color: rgba(11, 17, 28, 70%);
+    backdrop-filter: blur(30px);
     align-items: center;
     border-radius: 0.5rem;
+    
+    
 }
 
 #menu-logo {
@@ -135,6 +142,13 @@ img {
     font-weight: 500;
     font-size: 0.875rem;
     letter-spacing: 0.2px;
+}
+
+.navbar-container.hidden {
+    
+    margin-top: -100px;
+    position: fixed;
+
 }
 
 .nav-content ul a {
@@ -166,7 +180,7 @@ img {
     display: none;
 }
 .nav-content ul a:hover {
-    background-color: var(--menu-link-hover);
+    background-color: rgba(37, 42, 50, 50%);
     border-radius: 4px;
     transition: 0.3s;
 }
@@ -220,7 +234,7 @@ img {
 
     .navbar-mobile-container {
         right: -100%;
-        position: fixed;
+        /*position: fixed;*/
         color: var(--text-prime-color);
         background-color: rgba(11, 17, 28, 60%);
         backdrop-filter: blur(30px);
@@ -290,7 +304,6 @@ img {
         right: 0%;
     }
 
-    
 }
 
 @media screen and (max-width: 500px) {
