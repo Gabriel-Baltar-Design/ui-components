@@ -4,7 +4,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
     text-rendering:optimizeLegibility;
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
@@ -14,13 +15,15 @@
     --menu-background-color: #111111;
     --text-prime-color: #ffffff;
     --text-color-secondary: #111111;
+    --text-color-text-support: #CBCBCB;
     --transparent-color: rgba(0, 0, 0, 0);
     --menu-link-hover: #242424;
+    
 }
 
 html {
     background-color: var(--background-color);
-    background-image: url(/img/background.svg);
+    background-image: url(../img/background.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -50,15 +53,52 @@ img {
     margin: 0px auto;
     padding: 0px 20px;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.main-content #github-repository {
+    background: linear-gradient(to right, rgb(77, 97, 170, 100%), rgb(102, 193, 149, 100%));
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: var(--text-prime-color);
+    border: 1px solid var(--text-prime-color);
+    font-size: 0.875rem;
+    margin-top: 2.5rem;
+    font-weight: 400;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.components-select h1{
-    font-size: 3rem;
+.main-content #introduction-text {
+    color: var(--text-color-text-support);
+    max-width: 804px;
+    text-align: center;
+    line-height: 150%;
+}
+
+.components-select p{
+    font-size: 2.5rem;
     font-weight: 700;
-    opacity: 1;
+    text-transform: uppercase;
     color: var(--background-color-light);
     margin-bottom: 1.25rem;
     text-align: center;
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.components-select h1{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--background-color-light);
+    margin-bottom: 1.25rem;
+    text-align: center;
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .navbar-container {
@@ -99,18 +139,19 @@ img {
 
 .nav-content ul a {
     cursor: pointer;
-    color: var(--text-prime-color);
+    color: var(--text-color-text-support);
     padding: 6px 9px;
     transition: 0.3s;
 }
 
 .nav-content #github-repository {
-    background-color: var(--background-color-light);
+    background: linear-gradient(to right, rgb(77, 97, 170, 100%), rgb(102, 193, 149, 100%));
     padding: 10px 16px;
     border-radius: 4px;
-    color: var(--text-color-secondary);
+    color: var(--text-prime-color);
+    border: 1px solid var(--text-prime-color);
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 400;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -130,10 +171,42 @@ img {
     transition: 0.3s;
 }
 
+.content-experience {
+    max-width: 1280px;
+    height: 3000px;
+    display: flex;
+}
+.navbar-mobile-container {
+    display: none;       
+}
+
+@media screen and (max-width: 1210px) {
+
+    .components-select h1{
+        font-size: 3.5rem;
+    }
+
+    .components-select p{
+        font-size: 2rem;
+    }
+
+}
+
 @media screen and (max-width: 880px) {
+
+    .components-select h1{
+        font-size: 2rem;
+    }
+
+    .components-select p{
+        font-size: 1.25rem;
+    }
 
     .nav-content ul {
         display: none;
+    }
+    .navbar-content ul a{
+        color: var(--text-color-secondary);
     }
 
     .nav-content #github-repository {
@@ -144,6 +217,76 @@ img {
         display: block;
         cursor: pointer;
     }
+
+    .navbar-mobile-container {
+        right: -100%;
+        position: fixed;
+        color: var(--text-prime-color);
+        background-color: rgba(11, 17, 28, 50%);
+        backdrop-filter: blur(8px);
+        display: flex;
+        padding: 0 24px;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        z-index: 1000;
+        transition: right 0.3s ease;
+    }
+
+    .navbar-content {
+        background-color: var(--background-color-light);
+        width: 100%;
+        height: 440px;
+        border-radius: 12px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 24px;
+    }
+
+    .navbar-content li {
+        padding-bottom: 1.5rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    .navbar-content #github-repository-mobile {
+
+        background: linear-gradient(to right, rgb(77, 97, 170, 100%), rgb(102, 193, 149, 100%));
+        padding: 10px 16px;
+        border-radius: 4px;
+        color: var(--text-prime-color);
+        border: 1px solid var(--text-prime-color);
+        font-size: 0.875rem;
+        font-weight: 400;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .close-icon {
+        width: 100%;
+        height: 4.5rem;
+        display: flex;
+        justify-content: end;
+    }
+
+    .close-icon img{
+        width: 18px;
+        height: 18px;
+        align-self: center;
+    }
+
+    .show {
+        right: 0%;
+    }
+
+    
 }
 
 @media screen and (max-width: 500px) {
@@ -162,5 +305,13 @@ img {
     .main-container {
 
         margin-top: 64px;
+    }
+
+    .introduction-text p{
+        font-size: 0.875rem;
+    }
+
+    .components-select h1{
+        font-size: 2rem;
     }
 }
