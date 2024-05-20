@@ -5,3 +5,9 @@ import imagesLoop from './images-loop.js';
 imagesLoop();
 hiddenMenu();
 toggleMenu();
+
+
+
+(function () {
+    var scroll = new LocomotiveScroll();
+})();
