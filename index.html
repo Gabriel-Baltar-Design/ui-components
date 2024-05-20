@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>UI Components</title>
 </head>
-<body>
+<body data-scroll data-scroll-speed="2" id="smooth-scroll">
     <nav class="navbar-container" data-scroll="scroll-menu">
         <div class="nav-content">
             <img id="menu-logo" src="./img/menu-logo.svg" alt="menu-logo">
@@ -58,7 +58,7 @@
             <p id="introduction-text">Sou desenvolvedor front-end e UI Designer com 4 anos de experiência, colaborando em projetos para empresas como
                 Minerva, VLI, Deloitte, e TIM. Meu foco é criar interfaces elegantes e funcionais que melhoram a interação e
                 satisfação do usuário. Confira meu portfólio para ver como posso levar seu projeto ao próximo nível.</p>
-            <a id="github-repository" target="_blank" rel="noopener noreferrer" href="#"><img src="./img/contact-icon.svg" alt="botão enviar mensagem">Enviar mensagem</a>
+            <a id="github-repository" target="_blank" rel="noopener noreferrer" href="#"><img src="./img/contact-logo.svg" alt="botão enviar mensagem">Enviar mensagem</a>
         </div>
 
     </main>
@@ -100,7 +100,49 @@
 
     <section class="experience-container">
         <div class="expirience-content">
-
+            <div class="logo-and-title">
+                <img src="./img/star.svg" alt="ícone de estrela da seção de experiência">
+                <h3>Experiência com</h3>
+            </div>
+            <div class="text-content">
+                <div class="text">
+                    <div class="icon-text">
+                        <h4><img src="./img/seletor.svg" alt="seletor texto">Pesquisa</h4>
+                    </div>
+                    <p>Como parte do meu trabalho, dedico-me a realizar pesquisas aprofundadas para compreender as necessidades e
+                        preferências dos usuários. Esse processo é essencial para criar sites que sejam tanto atraentes quanto eficientes.
+                    </p>
+                </div>
+                <div class="text">
+                    <div class="icon-text">
+                        <h4><img src="./img/seletor.svg" alt="seletor texto">UI Design</h4>
+                    </div>
+                    <p>Crio sites eficientes, adaptáveis e envolventes, sem padrões predefinidos ou códigos complexos e lentos. Utilizo o
+                        Figma como base da minha abordagem de desenvolvimento web, desktop ou mobile para oferecer sites personalizados de
+                        alta qualidade e seguros.
+                    </p>
+                </div>
+                <div class="text">
+                    <div class="icon-text">
+                        <h4><img src="./img/seletor.svg" alt="seletor texto">UX Design</h4>
+                    </div>
+                    <p>Meu processo de design é centrado no usuário e orientado por pesquisa para garantir que cada projeto atenda às
+                        necessidades dos usuários finais e alcance os objetivos de negócios. Aqui estão as etapas que sigo: Pesquisa e
+                        Descoberta, Ideação e planejamento, Prototipação e Teste, Design Visual, Entrega e suporte, Avaliação e Iteração
+                    </p>
+                </div>
+                <div class="text">
+                    <div class="icon-text">
+                        <h4><img src="./img/seletor.svg" alt="seletor texto">Desenvolvimento</h4>
+                    </div>
+                    <p>Meu processo de desenvolvimento web front-end é orientado por práticas modernas e focado em criar experiências de
+                        usuário intuitivas e eficientes. Aqui estão as etapas que sigo para garantir a qualidade e a funcionalidade dos meus
+                        projetos: Análise de Requisitos, Desenvolvimento, Integração e Testes, Otimização etc.
+                    </p>
+                </div>
+                
+            </div>
+            
         </div>
     </section>
 
@@ -180,10 +222,53 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
     </section>
 
-    
-
+    <script src="locomotive-scroll.min.js"></script>
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll();
+        })();
+    </script>
     <script type="module" src="./js/main.js"></script>
 </body>
 </html>
