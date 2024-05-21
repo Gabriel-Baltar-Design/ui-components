@@ -17,19 +17,19 @@ export default function hiddenMenu() {
     window.addEventListener("scroll", () => {
 
         let scrollTop = window.scrollY|| document.documentElement.scrollTop;
-        console.log('ScrollTop: ', scrollTop);
+        /*console.log('ScrollTop: ', scrollTop);*/
 
         if(scrollTop > lastScrollTop) {
 
             //scroll para baixo remove o menu
 
-            console.log('Scroll para baixo');
+            //.log('Scroll para baixo');
             menu.classList.add("hidden");
 
         }else if(scrollTop < lastScrollTop){
 
             //scroll para cima volta com o menu
-            console.log('Scroll para cima');
+            //console.log('Scroll para cima');
             menu.classList.remove("hidden");
 
         }
