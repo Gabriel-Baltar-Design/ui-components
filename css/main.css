@@ -287,6 +287,7 @@ img {
 .logo-and-title {
     display: flex;
     gap: 0.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .logo-and-title h3 {
@@ -420,6 +421,145 @@ img {
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 24px;
+}
+
+.experience-professional-container {
+    display: flex;
+    width: 100%;
+    margin-top: 200px;
+}
+
+.experience-professional-content {
+    display: flex;
+    width: 1280px;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 0px 20px;
+    gap: 2rem;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.work-1 {
+    color: var(--text-prime-color);
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255, 10%);
+    line-height: 150%;
+}
+
+.work-time {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.work-1 h3 {
+    font-size: 1.5rem;
+    line-height: 40px;
+    font-weight: 500;
+    font-family: "Syne", sans-serif;
+}
+
+.work-1 h4 {
+    font-size: 1.125rem;
+    line-height: 40px;
+    font-weight: 600;
+    font-family: "Syne", sans-serif;
+}
+
+.work-1 p {
+    font-size: 0.875rem;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.blog-container {
+    display: flex;
+    width: 100%;
+    margin-top: 200px;
+}
+
+.blog-content {
+    display: flex;
+    width: 1280px;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 0px 20px;
+    gap: 4rem;
+}
+
+.blog-card {
+    display: flex;
+    max-width: 100%;
+    color: var(--text-prime-color);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-card img {
+    margin-right: 2rem;
+}
+
+.first-column {
+    display: flex;
+    align-items: center;
+}
+
+.blog-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog-description p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color-text-support);
+    max-width: 100%;
+}
+
+.blog-description h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Syne", sans-serif;
+}
+
+.tags span {
+    border: 1px solid var(--text-prime-color);
+    padding: 2px 1.5rem;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.button-read {
+    background-color: var(--background-color-light);
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    margin-left: 1rem;
+} 
+
+.button-read a {
+    color: var(--text-color-secondary);
+    font-family: "Syne", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1270px) {
@@ -601,6 +741,74 @@ img {
         margin-top: 150px;
     }
 
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+    }
+
+    .first-column {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .blog-description h3 {
+        line-height: 120%;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .work-1 {
+        color: var(--text-prime-color);
+        max-width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .work-time {
+        align-items: start;
+    }
+
+    .work-1 h3 {
+        font-size: 1.25rem;
+    }
+
+    .first-column {
+        width: 100%;
+        height: auto;
+    }
+
+    .first-column img {
+        width: 100%;
+        height: auto;
+        background-position: center;
+        object-fit: cover;
+    }
+
+    .button-read {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .button-read a {
+        margin-left: 0px;
+    }
+
+    .blog-content {
+        gap: 3rem;
+    }
+    
 }
 
 @media screen and (max-width: 500px) {
@@ -694,6 +902,11 @@ img {
 
     .card-text  a{
         max-width: 100%;
+    }
+
+    .experience-professional-container {
+
+        margin-top: 150px;
     }
 
 }
