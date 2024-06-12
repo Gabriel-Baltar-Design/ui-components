@@ -5,3 +5,4 @@ import imagesLoop from './images-loop.js';
 imagesLoop();
 hiddenMenu();
 toggleMenu();
+
