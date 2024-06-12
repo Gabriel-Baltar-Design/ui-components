@@ -18,7 +18,7 @@
     --text-color-text-support: #CBCBCB;
     --transparent-color: rgba(0, 0, 0, 0);
     --menu-link-hover: #242424;
-    --scrollbar-color: #7898F6;
+    --scrollbar-color: #F64F27;
     
 }
 
@@ -290,7 +290,7 @@ img {
 .logo-and-title {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
 }
 
 .logo-and-title h3 {
