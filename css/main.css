@@ -265,6 +265,7 @@ img {
     
 }
 
+
 .companies-text {
     width: 509px;
     color: var(--text-color-text-support);
@@ -685,6 +686,26 @@ img {
     gap: 2rem;
 }
 
+/* style.css */
+.accordion-content-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+    padding: 0 1rem;
+}
+
+.accordion-content-text.open {
+    max-height: 500px;
+    overflow: visible;
+    padding: 1rem;
+}
+
+.accordion-header {
+    cursor: pointer;
+    padding: 0px;
+}
+
+
 .accordion-text {
     display: flex;
     flex-direction: column;
@@ -693,6 +714,17 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     color: var(--text-prime-color);
+}
+
+.accordion-text h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Syne", sans-serif;
+    cursor: pointer;
+}
+
+.accordion-header {
+    cursor: pointer;
 }
 
 .question {
@@ -1090,10 +1122,27 @@ img {
     .blog-content {
         gap: 3rem;
     }
+
+    .accordion-text h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: "Syne", sans-serif;
+    }
     
 }
 
 @media screen and (max-width: 500px) {
+
+    .accordion-text h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        font-family: "Syne", sans-serif;
+    }
+
+
+    .logo-and-title {
+        margin-bottom: 3rem;
+    }
 
     .logo-and-title h3{
         font-size: 2rem;
