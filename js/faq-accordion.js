@@ -4,7 +4,7 @@ export default function faqAccordion() {
 
         const faqList = document.querySelector('[data-accordion="close"]');
         const faqItems = faqList.querySelectorAll('[data-accordion-item]');
-
+ 
         faqItems.forEach((item, index) => {
 
             const headerContent = item.querySelector("[data-accordion-header]");
