@@ -15,12 +15,14 @@ export default function openModal() {
 
     buttonCloseModal.addEventListener("click", () => {
         contactModal.classList.remove("active");
+        document.body.classList.remove("no-scroll");
     });
 
     contactModal.addEventListener("click", (event) => {
         const modalContent = document.querySelector('[data-modal-content]')
         if(!modalContent.contains(event.target)) {
             contactModal.classList.remove("active");
+            document.body.classList.remove("no-scroll");
         }
     });
 
