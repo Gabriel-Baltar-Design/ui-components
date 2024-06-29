@@ -18,11 +18,12 @@
     <link rel="icon" href="img/favicon.svg" type="image/x-icon">
     <title>Gabriel Baltar Pereira</title>
 </head>
-<body data-scroll data-scroll-speed="2" id="smooth-scroll">
+<body class="" data-scroll data-scroll-speed="2" id="smooth-scroll">
 
     <!-- Modal Enviar Mensagem -->
-     <section class="modal-container">
-        <div class="modal-content">
+     <section data-modal-contact class="modal-container">
+        <div data-modal-content class="modal-content">
+            <a data-moda-close class="button-close-modal" href="#"><img src="./img/close.svg" alt="Botão de fechar o modal"></a>
             <div class="modal-inputs">
                 <h3>Vamos Conversar!</h3>
                 <p>Estou sempre interessado em discutir novos projetos, oportunidades criativas ou parcerias. Não hesite em enviar uma
@@ -87,7 +88,7 @@
             <p id="introduction-text">Sou desenvolvedor Front-end e UI Designer com 4 anos de experiência, colaborando em projetos para empresas como
                 Minerva, VLI, Deloitte, e TIM. Meu foco é criar interfaces elegantes e funcionais que melhoram a interação e
                 satisfação do usuário. Confira meu portfólio para ver como posso levar seu projeto ao próximo nível.</p>
-            <a id="github-repository" target="_blank" rel="noopener noreferrer" href="#"><img src="./img/contact-logo.svg" alt="botão enviar mensagem">Enviar mensagem</a>
+            <a data-contact-button id="github-repository" href="#"><img src="./img/contact-logo.svg" alt="botão enviar mensagem">Enviar mensagem</a>
         </div>
 
     </main>
