@@ -1314,9 +1314,29 @@ img {
     height: 100%;
     backdrop-filter: blur(0.625rem);
     z-index: 200;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.active {
+   
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    position: fixed;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.modal-container.active .modal-content{
+   
+    transform: scale(1);
 }
 
 .modal-content {
@@ -1330,6 +1350,16 @@ img {
     align-items: center;
     justify-content: center;
     margin: 1.25rem;
+    position: relative;
+    transform: scale(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    
+}
+
+.button-close-modal {
+    position: absolute;
+    right: 24px;
+    top: 24px;
 }
 
 .form-contato {
